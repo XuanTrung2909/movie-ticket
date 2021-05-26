@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.link, .navlink{
+  text-decoration: none;
+}
+button{
+  outline: none;
+}
+.container{
+  max-width: 144em;
+}
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .container{
+    max-width: 114em;;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container{
+    max-width: 96em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container{
+    max-width: 72em;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .container{
+    max-width: 54em;
+  }
+}
