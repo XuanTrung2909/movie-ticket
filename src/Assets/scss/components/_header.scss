@@ -1,0 +1,101 @@
+.header{
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  height: 8rem;
+  align-items: center;
+  position: relative;
+  .logo{
+    img{
+      width: $w-7;
+    }
+  }
+  .nav{
+    li{
+      padding: 1rem $spacing;
+      .navlink{
+        transition: all 0.5s;
+      }
+      &:hover .navlink{
+        font-weight: bold;
+        color: $color-primary;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  .active{
+    font-weight: bold;
+    color: $color-primary;
+  }
+  .sign{
+    button{
+      font-size: small;
+      margin: 0 $spacing;
+      text-transform: unset;
+      transition: all 0.5s;
+      &:hover{
+        color: $color-primary;
+      }
+      svg{
+        margin-right: 0.5rem;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  .icon-menu{
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+  .mobile-menu{
+    position: absolute;
+    top: 0;
+    width: $w-8;
+    height: 100vh;
+    background-color: $color-white;
+    z-index: 10;
+    transition: all 0.5s;
+    line-height: 4rem;
+    padding: $spacing;
+    
+    .mobile-sign{
+      justify-content: space-around;
+      margin-bottom: $spacing;
+      align-items: center;
+      button{
+        font-size: small;
+        text-transform: unset;
+        display: block;
+        &:hover{
+          color: $color-primary;
+        }
+        svg{
+          margin-bottom: -0.6rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $w-12;
+    background-color: #00000080;
+    height: 100vh;
+    animation: animation-show 0.5s;
+    z-index: 9;
+  }
+}
+@keyframes animation-show{
+  from{
+    opacity: 0.5;
+  }
+  to{
+    opacity: 1;
+  }
+}

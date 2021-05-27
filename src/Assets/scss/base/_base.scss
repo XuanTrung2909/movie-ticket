@@ -6,12 +6,19 @@
 html{
   font-size: 10px;
 }
+body{
+  font-size: 1.6em;
+}
+ul{
+  list-style: none;
+}
 .row{
   display: flex;
   flex-wrap: wrap;
 }
 .link, .navlink{
   text-decoration: none;
+  color: $color-black;
 }
 button{
   outline: none;
@@ -38,4 +45,16 @@ button{
   .container{
     max-width: 54em;
   }
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.show-menu{
+  right: 0;
+}
+.hide-menu{
+  right: -100%;
 }
