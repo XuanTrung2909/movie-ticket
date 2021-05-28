@@ -1,3 +1,9 @@
+ import carousel1 from './../Assets/img/carousel_1.jpg';
+ import carousel2 from './../Assets/img/carousel_2.jpg';
+
+ 
+ 
+ 
  export const NAVLIST = [
    {
      value: 0,
@@ -13,10 +19,10 @@
  export const CAROUSELLIST = [
    {
      value: 0,
-     path: './../Assets/img/carousel_1.jpg'
+     path: carousel1
    },
    {
     value: 1,
-    path: './../Assets/img/carousel_2.jpg'
+    path: carousel2
   }
  ]
