@@ -13,15 +13,19 @@ export default function Carousel() {
     slidesToScroll: 1,
   };
   const carouselList = CAROUSELLIST;
+  console.log(carouselList);
 
   const renderCarousel = () => {
     return carouselList.map(carouselItem => {
+      console.log(carouselItem.path);
       return(
+        
         <div
           key={carouselItem.value}
           className="carousel-item"
-          style={{ background: `url(${carouselItem.path})` }}
-        ></div>
+        >
+          
+        </div>
       )
     })
   }
@@ -32,5 +36,5 @@ export default function Carousel() {
         {renderCarousel()}
       </Slider>
     </div>
-  );
+  )
 }

@@ -14,7 +14,7 @@ export default function HomeTemplate(props) {
         render={(propsRoute) => {
           return(
             <Fragment>
-              <props.component {...propsRoute} />;
+              <props.component {...propsRoute} />
             </Fragment>
           )
         }}
