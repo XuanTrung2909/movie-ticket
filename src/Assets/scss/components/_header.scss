@@ -5,11 +5,14 @@
   align-items: center;
   position: relative;
   .logo{
+    width: $w-4;
     img{
-      width: $w-7;
+      width: $w-logo-large;
     }
   }
   .nav{
+    width: $w-4;
+    justify-content: center;
     li{
       padding: 1rem $spacing;
       .navlink{
@@ -20,7 +23,7 @@
         color: $color-primary;
       }
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 991px) {
       display: none;
     }
   }
@@ -29,7 +32,11 @@
     color: $color-primary;
   }
   .sign{
+    width: $w-4;
+    justify-content: flex-end;
+    
     button{
+      display: block;
       font-size: small;
       margin: 0 $spacing;
       text-transform: unset;
@@ -39,20 +46,21 @@
       }
       svg{
         margin-right: 0.5rem;
+        margin-bottom: -0.6rem;
       }
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 991px) {
       display: none;
     }
   }
   .icon-menu{
     display: none;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 991px) {
       display: block;
     }
   }
   .mobile-menu{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: $w-8;
     height: 100vh;
@@ -61,11 +69,21 @@
     transition: all 0.5s;
     line-height: 4rem;
     padding: $spacing;
-    
+    animation: animation-show 0.5s;
     .mobile-sign{
       justify-content: space-around;
       margin-bottom: $spacing;
       align-items: center;
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #80808030;
+        height: 0.2rem;
+      }
       button{
         font-size: small;
         text-transform: unset;
@@ -79,6 +97,10 @@
         }
       }
     }
+    .mobile-nav{
+      font-size: large;
+      font-weight: 500;
+    }
   }
   .overlay{
     position: absolute;
@@ -90,6 +112,15 @@
     animation: animation-show 0.5s;
     z-index: 9;
   }
+  @media screen and (max-width: 575px) {
+    height: 5rem;
+    .logo{
+      img{
+        width: $w-logo-small;
+      }
+      
+    }
+  }
 }
 @keyframes animation-show{
   from{
@@ -98,4 +129,5 @@
   to{
     opacity: 1;
   }
+ 
 }

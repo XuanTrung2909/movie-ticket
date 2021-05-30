@@ -1,49 +1,54 @@
-import React from "react";
+import React, { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { CAROUSELLIST } from "../Ulti/constants";
-import carousel1 from "./../Assets/img/carousel_1.jpg";
+
+import { Button } from "@material-ui/core";
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 export default function Carousel() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
+    autoplay: true, 
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    slickNext: "#carousel-next",
+    slickPrev: "#carousel-prev",
+    arrows: false,
   };
+  const sliderRef = useRef()
+  const carouselNext = () => {
+    sliderRef.current.slickNext();
+  }
+  const carouselPrev = () => {
+    sliderRef.current.slickPrev();
+  }
+
   const carouselList = CAROUSELLIST;
-  console.log(carouselList);
 
-  // const renderCarousel = () => {
-  //   return carouselList.map(carouselItem => {
-  //     console.log(carouselItem.path);
-  //     return(
-
-  //       <div
-  //         key={carouselItem.value}
-  //         className="carousel-item"
-  //         style={{backgroundImage: `url(${carouselItem.path})`}}
-  //       >
-
-  //       </div>
-  //     )
-  //   })
-  // }
+  const renderCarousel = () => {
+    return carouselList.map((carouselItem) => {
+      return (
+        <div key={carouselItem.value}>
+          <div className="carousel-item">
+            <img src={carouselItem.path} alt="carousel" />
+          </div>
+        </div>
+      );
+    });
+  };
 
   return (
     <div className="carousel">
-      <Slider {...settings}>
-        <div
-          className="carousel-item"
-          style={{ backgroundImage: `url(${carousel1})` }}
-        ></div>
+      <Slider {...settings} ref={sliderRef}>
+        {renderCarousel()}
       </Slider>
-      <div
-        className="carousel-item"
-        style={{ backgroundImage: `url(${carousel1})` }}
-      ></div>
+      <Button onClick={carouselPrev} className='carousel-prev' ><ArrowBackIosIcon></ArrowBackIosIcon></Button>
+      <Button onClick={carouselNext} className='carousel-next' ><ArrowForwardIosIcon></ArrowForwardIosIcon></Button>
     </div>
   );
 }

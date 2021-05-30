@@ -14,7 +14,17 @@
      value: 1,
      name: 'Cụm Rạp',
      path: '/cum-rap'
-   }
+   },
+   {
+    value: 2, 
+    name: 'Tin Tức',
+    path: '/tin-tức'
+  },
+  {
+   value: 3, 
+   name: 'Ứng Dụng',
+   path: '/ung-dung'
+ }
  ]
  export const CAROUSELLIST = [
    {

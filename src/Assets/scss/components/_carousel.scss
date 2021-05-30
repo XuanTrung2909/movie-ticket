@@ -1,19 +1,32 @@
 .carousel{
+  position: relative;
   .carousel-item{
-    height: 76rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     img{
       width: 100%;
+      display: block;
+    }
+  }
+  .carousel-prev, .carousel-next{
+    position: absolute;
+    top: 50%;
+    color: $color-white;
+    svg{
+      font-size: 3rem;
     }
     
   }
-  .item-1{
-    background-image: url(./../../img/carousel_1.jpg);
-    
+  @media screen and (max-width: 575px) {
+    .carousel-prev, .carousel-next{
+      top: 40%;
+      svg{
+        font-size: 1.5rem;
+      }
+    }
   }
-  .item-2{
-    background-image: url(./../../img/carousel_2.jpg);
+  .carousel-prev{
+    left: 1%;
+  }
+  .carousel-next{
+    right: 1%;
   }
 }

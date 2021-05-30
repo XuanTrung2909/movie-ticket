@@ -41,7 +41,7 @@ export default function Header(props) {
         </Link>
       </div>
       <ul className="nav row">{renderNavbar()}</ul>
-      <div className="sign">
+      <div className="sign row">
         <Link className="link" to="/dang-nhap">
           <Button><AccountCircle fontSize='large'></AccountCircle>Đăng Nhập</Button>
         </Link>
