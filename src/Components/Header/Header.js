@@ -1,9 +1,9 @@
 import { Button, IconButton } from "@material-ui/core";
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "./../Assets/img/tix-logo.png";
+import logo from "./../../Assets/img/tix-logo.png";
 import MenuIcon from "@material-ui/icons/Menu";
-import {NAVLIST} from './../Ulti/constants'
+import {NAVLIST} from '../../Ulti/constants'
 import { AccountCircle } from "@material-ui/icons";
 
 export default function Header(props) {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import { Route } from "react-router";
-import Header from "../Components/Header";
+import Header from './../Components/Header/Header'
 
 
 export default function HomeTemplate(props) {

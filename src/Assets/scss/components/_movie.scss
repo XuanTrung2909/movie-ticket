@@ -1,0 +1,77 @@
+.movie-list{
+  position: relative;
+  .movie-item{
+    width: $w-3;
+    padding: $spacing;
+    .item-img{
+      height: 40rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: $w-12;
+      position: relative;
+      border-radius: 0.5rem;
+      
+      .overlay{
+        position: absolute;
+        background: linear-gradient(to bottom, transparent, black );
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 100%;
+        border-radius: 0.5rem;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        animation: animationShow 0.5s;
+        .icon-play{
+          font-size: 7rem;
+          color: $color-white;
+          
+        }
+      }
+      &:hover .overlay{
+        display: flex;
+      }
+      .item-rating{
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        width: $w-4;
+        background: #0c1b36cc;
+        text-align: center;
+        border-radius: 0.5rem;
+        padding: 1rem 0;
+        p{
+          color: $color-white;
+          font-weight: 700;
+        }
+        .rating{
+          color: red;
+        }
+      }
+    }
+  }
+  button{
+    position: absolute;
+    top: 50%;
+    svg{
+      font-size: 5rem;
+      color: $color-gray;
+    }
+  }
+  .slider-prev{
+    left: -5%;
+  }
+  .slider-next{
+    right: -5%;
+  }
+}
+@keyframes animationShow{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}

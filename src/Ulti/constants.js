@@ -35,4 +35,5 @@
     value: 1,
     path: carousel2
   }
- ]
+ ];
+ export const GET_MOVIE_BY_GROUP = 'GET_MOVIE_BY_GROUP';

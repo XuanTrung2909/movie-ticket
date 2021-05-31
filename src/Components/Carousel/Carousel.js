@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { CAROUSELLIST } from "../Ulti/constants";
+import { CAROUSELLIST } from "../../Ulti/constants";
 
 import { Button } from "@material-ui/core";
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
