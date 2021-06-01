@@ -1,77 +1,129 @@
-.movie-list{
-  position: relative;
-  .movie-item{
-    width: $w-3;
-    padding: $spacing;
-    .item-img{
-      height: 40rem;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: $w-12;
-      position: relative;
-      border-radius: 0.5rem;
-      
-      .overlay{
-        position: absolute;
-        background: linear-gradient(to bottom, transparent, black );
-        left: 0;
-        top: 0;
-        right: 0;
-        height: 100%;
+.movie {
+  margin-top: 5rem;
+  
+  .tabs {
+    .tablist {
+      display: flex;
+      justify-content: center;
+      .tab{
+        margin: 0 2rem;
+        font-size: $font-size-20;
+        cursor: pointer;
+        &:hover{
+          font-weight: bold;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+  .movie-list {
+    
+    position: relative;
+    .movie-item {
+      width: $w-3;
+      padding: $spacing;
+      .item-img {
+        height: 30rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: $w-12;
+        position: relative;
         border-radius: 0.5rem;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        animation: animationShow 0.5s;
-        .icon-play{
-          font-size: 7rem;
-          color: $color-white;
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+          height: 30rem;
+        }
+
+        .overlay {
+          position: absolute;
+          background: linear-gradient(to bottom, transparent, black);
+          left: 0;
+          top: 0;
+          right: 0;
+          height: 100%;
+          border-radius: 0.5rem;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          animation: animationShow 0.5s;
+          .icon-play {
+            font-size: 7rem;
+            color: $color-white;
+          }
+        }
+        &:hover .overlay {
+          display: flex;
+        }
+        .item-rating {
+          position: absolute;
+          top: 2%;
+          right: 2%;
+          width: $w-4;
+          background: #0c1b36cc;
+          text-align: center;
+          border-radius: 0.5rem;
+          padding: 1rem 0;
+          p {
+            color: $color-white;
+            font-weight: 700;
+          }
+          .rating {
+            color: red;
+          }
+        }
+      }
+      .item-content {
+        margin-top: $spacing;
+        h3 {
+          font-size: $font-size-nomarl;
+          height: 5rem;
+        }
+        
+        button {
           
-        }
-      }
-      &:hover .overlay{
-        display: flex;
-      }
-      .item-rating{
-        position: absolute;
-        top: 2%;
-        right: 2%;
-        width: $w-4;
-        background: #0c1b36cc;
-        text-align: center;
-        border-radius: 0.5rem;
-        padding: 1rem 0;
-        p{
+          font-size: $font-size-nomarl;
+          text-transform: uppercase;
+          width: $w-12;
+          background-color: $color-primary;
           color: $color-white;
-          font-weight: 700;
+          transition: all 0.5s;
         }
-        .rating{
-          color: red;
-        }
+        
+      }
+      
+    }
+    .slider-prev,
+    .slider-next {
+      position: absolute;
+      top: 50%;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+
+      svg {
+        font-size: 5rem;
+        color: $color-gray;
       }
     }
-  }
-  button{
-    position: absolute;
-    top: 50%;
-    svg{
-      font-size: 5rem;
-      color: $color-gray;
+    .slider-prev {
+      left: -7%;
+    }
+    .slider-next {
+      right: -7%;
     }
   }
-  .slider-prev{
-    left: -5%;
-  }
-  .slider-next{
-    right: -5%;
+  .active{
+    font-weight: bold;
+    color: $color-primary;
   }
 }
-@keyframes animationShow{
-  from{
+
+@keyframes animationShow {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
+

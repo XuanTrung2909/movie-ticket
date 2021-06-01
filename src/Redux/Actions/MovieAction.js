@@ -9,7 +9,7 @@ export const getMovieByGroup = (idGroup) => {
         method: 'GET'
       })
       dispatch({
-        type: 'GET_MOVIE_BY_GROUP',
+        type: GET_MOVIE_BY_GROUP,
         movieList: result.data
       })
     } catch (error) {
