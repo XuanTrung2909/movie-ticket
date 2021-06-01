@@ -5,6 +5,7 @@ import { GET_MOVIE_PLAY } from "./../../../../Ulti/constants";
 import { useDispatch } from "react-redux";
 import { Button } from "@material-ui/core";
 import { Rating } from "@material-ui/lab";
+import { Link } from "react-router-dom";
 
 export default function MovieItem(props) {
   const movieItem = props.movieItem;
@@ -31,16 +32,18 @@ export default function MovieItem(props) {
           <p>{movieItem.danhGia}</p>
           <Rating
             name="half-rating-read"
-            value={movieItem.danhGia/2}
+            value={movieItem.danhGia / 2}
             precision={0.5}
             readOnly
-            size='small'
+            size="small"
           />
         </div>
       </div>
       <div className="item-content">
         <h3>{movieItem.tenPhim}</h3>
-        <Button>Đặt Vé</Button>
+        <Link to={`/${movieItem.maPhim}`} className='link'>
+          <Button>Đặt Vé</Button>
+        </Link>
       </div>
     </Fragment>
   );
