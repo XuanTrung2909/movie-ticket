@@ -11,7 +11,7 @@ export default function Movie(props) {
   }
   return (
     <div className="movie">
-      <Tabs className='tabs'>
+      <Tabs className='tabs' selectedTabClassName='active'>
         <TabList className='tablist'>
           <Tab className='tab' onClick={handleActiveTab}>Đang Chiếu</Tab>
           <Tab className='tab' onClick={handleActiveTab}>Sắp Chiếu</Tab>
