@@ -9,6 +9,8 @@ import Login from "./Pages/Login";
 import SignTemplate from "./Templates/SignTemplate";
 import HomeTemplate from "./Templates/HomeTemplate";
 import Home from "./Pages/Home";
+import SignUp from "./Pages/SignUp";
+import Modal from "./Components/Modal/Modal";
 
 
 
@@ -17,11 +19,12 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <SignTemplate path='/dang-ky' component={SignUp}/>
           <SignTemplate path='/dang-nhap' component={Login} />
           <HomeTemplate path='/' exact component={Home} />
         </Switch>
       </Router>
-      
+      <Modal />
     </div>
   );
 }

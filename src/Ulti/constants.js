@@ -5,22 +5,22 @@ export const NAVLIST = [
   {
     value: 0,
     name: "Phim",
-    path: "/phim",
+    idIntroView:'#movie',
   },
   {
     value: 1,
     name: "Cụm Rạp",
-    path: "/cum-rap",
+    idIntroView:'#cinema',
   },
   {
     value: 2,
     name: "Tin Tức",
-    path: "/tin-tức",
+    idIntroView:'#new',
   },
   {
     value: 3,
     name: "Ứng Dụng",
-    path: "/ung-dung",
+    idIntroView:'#aplication',
   },
 ];
 export const CAROUSELLIST = [

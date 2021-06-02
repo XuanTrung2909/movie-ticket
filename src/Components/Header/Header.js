@@ -1,10 +1,11 @@
 import { Button, IconButton } from "@material-ui/core";
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link} from "react-router-dom";
 import logo from "./../../Assets/img/tix-logo.png";
 import MenuIcon from "@material-ui/icons/Menu";
-import {NAVLIST} from '../../Ulti/constants'
+import { NAVLIST } from "../../Ulti/constants";
 import { AccountCircle } from "@material-ui/icons";
+import ScrollIntoView from "react-scroll-into-view";
 
 export default function Header(props) {
   const navList = NAVLIST;
@@ -12,15 +13,10 @@ export default function Header(props) {
   const renderNavbar = () => {
     return navList.map((navItem) => {
       return (
-        <li key={navItem.value}>
-          <NavLink
-            activeClassName="active"
-            className="navlink"
-            to={navItem.path}
-            onClick={handlCloseMenu}
-          >
+        <li key={navItem.value} onClick={handlCloseMenu}>
+          <ScrollIntoView selector={navItem.idIntroView}>
             {navItem.name}
-          </NavLink>
+          </ScrollIntoView>
         </li>
       );
     });
@@ -43,10 +39,14 @@ export default function Header(props) {
       <ul className="nav row">{renderNavbar()}</ul>
       <div className="sign row">
         <Link className="link" to="/dang-nhap">
-          <Button><AccountCircle fontSize='large'></AccountCircle>Đăng Nhập</Button>
+          <Button>
+            <AccountCircle fontSize="large"></AccountCircle>Đăng Nhập
+          </Button>
         </Link>
         <Link className="link" to="/dang-ky">
-          <Button><AccountCircle fontSize='large'></AccountCircle>Đăng Ký</Button>
+          <Button>
+            <AccountCircle fontSize="large"></AccountCircle>Đăng Ký
+          </Button>
         </Link>
       </div>
       <div className="icon-menu">
@@ -60,11 +60,15 @@ export default function Header(props) {
         }
       >
         <div className="mobile-sign row">
-          <Link className='link' to='/dang-nhap'>
-            <Button><AccountCircle fontSize='large'></AccountCircle>Đăng Nhập</Button>
+          <Link className="link" to="/dang-nhap">
+            <Button>
+              <AccountCircle fontSize="large"></AccountCircle>Đăng Nhập
+            </Button>
           </Link>
-          <Link className='link' to='/dang-ky'>
-            <Button><AccountCircle fontSize='large'></AccountCircle>Đăng Ký</Button>
+          <Link className="link" to="/dang-ky">
+            <Button>
+              <AccountCircle fontSize="large"></AccountCircle>Đăng Ký
+            </Button>
           </Link>
         </div>
         <ul className="mobile-nav">{renderNavbar()}</ul>

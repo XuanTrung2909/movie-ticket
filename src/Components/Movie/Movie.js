@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "../Modal/Modal";
+
 import MovieList from "./MovieList/MovieList";
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -10,7 +10,7 @@ export default function Movie(props) {
     event.target.classList.add('active');
   }
   return (
-    <div className="movie">
+    <div className="movie" id='movie'>
       <Tabs className='tabs' selectedTabClassName='active'>
         <TabList className='tablist'>
           <Tab className='tab' onClick={handleActiveTab}>Đang Chiếu</Tab>
@@ -25,7 +25,7 @@ export default function Movie(props) {
         </TabPanel>
       </Tabs>
 
-      <Modal />
+      
     </div>
   );
 }

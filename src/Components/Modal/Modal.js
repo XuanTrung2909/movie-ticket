@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {CLOSE_MODAL_PLAY} from './../../Ulti/constants'
 
 export default function Modal(props) {
-  const { openModalPlay, movieItemWatch } = useSelector((state) => state.MovieReducer);
+  const { openModalPlay, linkTrailer } = useSelector((state) => state.MovieReducer);
   const dispatch = useDispatch();
   return (
     <div>
@@ -12,7 +12,7 @@ export default function Modal(props) {
             // channel="youtube"
             autoplay
             isOpen={openModalPlay}
-            videoId= {movieItemWatch.trailer}
+            videoId= {linkTrailer}
             onClose={() => {
               dispatch({
                 type: CLOSE_MODAL_PLAY

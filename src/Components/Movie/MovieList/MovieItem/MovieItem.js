@@ -23,7 +23,7 @@ export default function MovieItem(props) {
             onClick={() => {
               dispatch({
                 type: GET_MOVIE_PLAY,
-                movieItemWatch: movieItem,
+                linkTrailer: movieItem.trailer.slice(-11)
               });
             }}
           ></PlayCircleOutlineIcon>

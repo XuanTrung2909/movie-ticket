@@ -3,7 +3,7 @@ import {GET_MOVIE_BY_GROUP, GET_MOVIE_PLAY, CLOSE_MODAL_PLAY} from './../../Ulti
 const stateDefault = {
   movieList: [],
   openModalPlay: false,
-  movieItemWatch: {},
+  linkTrailer: '',
 
 
 }
@@ -14,7 +14,7 @@ export const MovieReducer = (state=stateDefault, action) => {
       return {...state};
     }
     case GET_MOVIE_PLAY:{
-      state.movieItemWatch = action.movieItemWatch;
+      state.linkTrailer = action.linkTrailer;
       state.openModalPlay = true;
       return {...state};
     }

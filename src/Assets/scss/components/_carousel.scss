@@ -1,9 +1,21 @@
 .carousel{
   position: relative;
   .carousel-item{
-    img{
-      width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 76rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover svg{
       display: block;
+    }
+    svg{
+      color: $color-gray;
+      font-size: 10rem;
+      display: none;
+      cursor: pointer;
     }
   }
   .carousel-prev, .carousel-next{
