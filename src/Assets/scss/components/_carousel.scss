@@ -1,5 +1,6 @@
 .carousel{
   position: relative;
+  margin-top: 6rem;
   .carousel-item{
     background-size: cover;
     background-position: center;
@@ -8,6 +9,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    @media screen and (max-width: 991px) and (min-width: 576px) {
+      height: 30rem;
+    }
+    @media screen and (max-width: 1199px) and (min-width: 992px) {
+      height: 50rem;
+    }
+    @media screen and (max-width: 575px){
+      height: 20rem;
+    }
     &:hover svg{
       display: block;
     }
@@ -28,6 +39,7 @@
     
   }
   @media screen and (max-width: 575px) {
+    margin-top: 5rem;
     .carousel-prev, .carousel-next{
       top: 40%;
       svg{

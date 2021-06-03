@@ -1,15 +1,14 @@
-import {GET_MOVIE_BY_GROUP, GET_MOVIE_PLAY, CLOSE_MODAL_PLAY} from './../../Ulti/constants';
+import {GET_MOVIE_BY_GROUP, GET_MOVIE_PLAY, CLOSE_MODAL_PLAY, GET_MOVIE_DETAIL} from './../../Ulti/constants';
 
 const stateDefault = {
   movieList: [],
   openModalPlay: false,
   linkTrailer: '',
-
-
+  movieDetail: {},
 }
 export const MovieReducer = (state=stateDefault, action) => {
   switch (action.type) {
-    case GET_MOVIE_BY_GROUP: {
+    case GET_MOVIE_BY_GROUP:{
       state.movieList = action.movieList;
       return {...state};
     }
@@ -21,6 +20,10 @@ export const MovieReducer = (state=stateDefault, action) => {
     case CLOSE_MODAL_PLAY:{
       state.openModalPlay = false;
       return {...state};
+    }
+    case GET_MOVIE_DETAIL:{
+      state.movieDetail = action.movieDetail;
+      return {... state};
     }
   
     default: return {...state};

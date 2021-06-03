@@ -1,0 +1,25 @@
+.movie-detail-content{
+  background-color: $color-bg-detail;
+  .tabs{
+    .title{
+      display: flex;
+      justify-content: center;
+      li{
+        font-size: $font-size-22;
+        color: $color-white;
+        transition: all 0.5s;
+        margin: 0 2rem;
+        &:hover{
+          
+          font-weight: bold;
+        }
+      }
+      .active{
+        font-weight: bold;
+        color: $color-primary;
+        letter-spacing: 0.3rem;
+      }
+    }
+  }
+  
+}

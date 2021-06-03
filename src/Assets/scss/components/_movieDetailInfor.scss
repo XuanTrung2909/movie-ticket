@@ -1,0 +1,37 @@
+.movie-detail-info {
+  background-image: url(./../../img/bg-movie-detail.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  .row {
+    .img {
+      width: $w-3;
+      padding: 0 $spacing;
+      img {
+        width: 100%;
+      }
+    }
+    .info {
+      width: $w-6;
+      padding: 10rem $spacing;
+      h3 {
+        margin: 2rem 0;
+        font-size: $font-size-20;
+      }
+      button {
+        background-color: $color-primary;
+        height: 5rem;
+        width: 15rem;
+        color: $color-white;
+        font-size: $font-size-nomarl;
+      }
+    }
+    .chart-rating {
+      width: $w-3;
+      padding: 0 $spacing;
+    }
+  }
+}

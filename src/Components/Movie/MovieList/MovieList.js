@@ -39,7 +39,7 @@ export default function MovieList(props) {
     speed: 500,
     rows: 2,
     slidesPerRow: 4,
-    arrow: false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 991,

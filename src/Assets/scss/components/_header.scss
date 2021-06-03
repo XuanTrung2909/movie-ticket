@@ -1,9 +1,13 @@
 .header{
   justify-content: space-between;
   padding: 0 2.4rem;
-  height: 8rem;
+  height: 6rem;
   align-items: center;
-  position: relative;
+  position: fixed;
+  width: $w-12;
+  background-color: #ffffffeb;
+  z-index: 100;
+  top: 0;
   .logo{
     width: $w-4;
     img{
@@ -15,6 +19,7 @@
     justify-content: center;
     li{
       padding: 1rem $spacing;
+      cursor: pointer;
       .navlink{
         transition: all 0.5s;
       }

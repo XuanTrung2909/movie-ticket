@@ -36,3 +36,4 @@ export const CAROUSELLIST = [
 export const GET_MOVIE_BY_GROUP = "GET_MOVIE_BY_GROUP";
 export const GET_MOVIE_PLAY = 'GET_MOVIE_PLAY';
 export const CLOSE_MODAL_PLAY = 'CLOSE_MODAL_PLAY'
+export const GET_MOVIE_DETAIL = 'GET_MOVIE_DETAIL'

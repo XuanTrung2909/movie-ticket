@@ -3,7 +3,7 @@ import React from "react";
 import MovieList from "./MovieList/MovieList";
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import "react-tabs/style/react-tabs.css";
+
 
 export default function Movie(props) {
   const handleActiveTab = (event) => {

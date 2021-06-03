@@ -95,7 +95,7 @@
     .slider-prev,
     .slider-next {
       position: absolute;
-      top: 50%;
+      top: 45%;
       @media screen and (max-width: 991px) {
         display: none;
       }
@@ -106,10 +106,10 @@
       }
     }
     .slider-prev {
-      left: -7%;
+      left: -5%;
     }
     .slider-next {
-      right: -7%;
+      right: -5%;
     }
   }
   .active{

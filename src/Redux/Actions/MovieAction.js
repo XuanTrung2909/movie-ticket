@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {GET_MOVIE_BY_GROUP} from './../../Ulti/constants'
+import {GET_MOVIE_BY_GROUP, GET_MOVIE_DETAIL} from './../../Ulti/constants'
 
 export const getMovieByGroup = (idGroup) => {
   return async(dispatch) => {
@@ -17,3 +17,21 @@ export const getMovieByGroup = (idGroup) => {
     }
   }
 }
+export const getMovieDetail = (idMovie) => {
+  return async(dispatch) => {
+    try {
+      const result = await axios({
+        url:`https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${idMovie}`,
+        method: 'GET'
+      });
+      dispatch({
+        
+        type: GET_MOVIE_DETAIL,
+        movieDetail: result.data
+      })
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
+} 

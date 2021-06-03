@@ -7,6 +7,7 @@ import { Button } from "@material-ui/core";
 import { Rating } from "@material-ui/lab";
 import { Link } from "react-router-dom";
 
+
 export default function MovieItem(props) {
   const movieItem = props.movieItem;
   const dispatch = useDispatch();
@@ -17,17 +18,19 @@ export default function MovieItem(props) {
         className="item-img"
         style={{ backgroundImage: `url(${movieItem.hinhAnh})` }}
       >
-        <div className="overlay">
-          <PlayCircleOutlineIcon
-            className="icon-play"
-            onClick={() => {
-              dispatch({
-                type: GET_MOVIE_PLAY,
-                linkTrailer: movieItem.trailer.slice(-11)
-              });
-            }}
-          ></PlayCircleOutlineIcon>
-        </div>
+        
+          <div className="overlay">
+            <PlayCircleOutlineIcon
+              className="icon-play"
+              onClick={() => {
+                dispatch({
+                  type: GET_MOVIE_PLAY,
+                  linkTrailer: movieItem.trailer.slice(-11),
+                });
+              }}
+            ></PlayCircleOutlineIcon>
+          </div>
+        
         <div className="item-rating">
           <p>{movieItem.danhGia}</p>
           <Rating
@@ -39,12 +42,14 @@ export default function MovieItem(props) {
           />
         </div>
       </div>
+      <Link className='link' to={`/detail/${movieItem.maPhim}`}>
       <div className="item-content">
         <h3>{movieItem.tenPhim}</h3>
-        <Link to={`/${movieItem.maPhim}`} className='link'>
+        <Link to={`/detail/${movieItem.maPhim}`} className="link">
           <Button>Đặt Vé</Button>
         </Link>
       </div>
+      </Link>
     </Fragment>
   );
 }

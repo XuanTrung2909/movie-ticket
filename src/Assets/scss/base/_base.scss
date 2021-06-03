@@ -24,23 +24,23 @@ button{
   outline: none;
 }
 .container{
-  max-width: 1140px;
+  width: 1140px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .container{
-    max-width: 960px;
+    width: 960px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .container{
-    max-width: 720px;
+    width: 720px;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
   .container{
-    max-width: 540px;
+    width: 540px;
   }
 }
 .show{
